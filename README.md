@@ -1,13 +1,14 @@
 # Laravel Boilerplate
 A laravel boilerplate for quick setup and get into development asap.
 
-<!-- ## Feature Include
+## Feature Include
 - Reorganized app structure
 	- `Api` (For all API related function)
 	- `Console` (For command line related function)
 	- `Infrastructure` (For core system related function)
 	- `Support` (For custom feature related function)
 	- `Web` (For web related function)
+    - `Helper` (For helper function)
 - Implemented base login, logout and get user information API using `Laravel Passport`
 - Implemented debugging tool for developer using `Laravel Telescope` and with control of accessible only by specific email address
 - Clean controller setup
@@ -16,13 +17,16 @@ A laravel boilerplate for quick setup and get into development asap.
 - Standardized API response which include:
 	- Unauthorized request
 	- Validation request
-- Support API versioning -->
+- Support API versioning
 
 ## Package Include
-<!-- - Data Transfer Object
-- Eloquent Filter
+<!--
 - Enum
 - Passport -->
+- Eloquent Filter
+- [Action & Data Transfer Object](https://github.com/mazfreelance/laravel-command-generator)
+- Spatie/Slugable
+- Spatie/Laravel Permission
 - Telescope
 
 ## Prerequisite
@@ -60,7 +64,7 @@ php artisan migrate --seed
 
 Next, run the following command to setup `Passport` and `Telescope`
 ```
-php artisan passport:install
+php artisan passport:install --uuids
 php artisan telescope:install
 ```
 > After running ```php artisan telescope:install```, you should see `app\Providers` being created and inside there will be `TelescopeServiceProvider` file. Please delete the folder as this has been moved to `app\Web\Providers`

@@ -185,17 +185,14 @@ return [
         /*
          * Package Service Providers...
          */
+        Spatie\Permission\PermissionServiceProvider::class,
+        Mazfreelance\LaravelCommandGenerator\ServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class,
-
+        Api\v1\Providers\AppServiceProvider::class,
+        Web\Providers\AppServiceProvider::class,
     ],
 
     /*
@@ -211,6 +208,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Auth' => \Illuminate\Support\Facades\Auth::class
     ])->toArray(),
 
 ];
