@@ -20,9 +20,8 @@ A laravel boilerplate for quick setup and get into development asap.
 - Support API versioning
 
 ## Package Include
-<!--
 - Enum
-- Passport -->
+- Passport
 - Eloquent Filter
 - [Action & Data Transfer Object](https://github.com/mazfreelance/laravel-command-generator)
 - Spatie/Slugable
